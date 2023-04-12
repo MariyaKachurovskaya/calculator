@@ -10,6 +10,10 @@ class Div : public ASTNode {
             : ASTNode(repr, left, right)
             , val_(repr) {}
 
+    Div(const Div &other) = delete;
+
+    ~Div();
+
     std::string value() const { return val_; }
 
 private:

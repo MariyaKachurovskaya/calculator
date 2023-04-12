@@ -10,6 +10,10 @@ class Sub : public ASTNode {
             : ASTNode(repr, left, right)
             , val_(repr) {}
 
+    Sub(const Sub &other) = delete;
+
+    ~Sub();
+
     std::string value() const { return val_; }
 
 private:

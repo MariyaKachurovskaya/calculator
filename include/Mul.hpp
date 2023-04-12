@@ -10,6 +10,10 @@ class Mul : public ASTNode {
             : ASTNode(repr, left, right)
             , val_(repr) {}
 
+    Mul(const Mul &other) = delete;
+
+    ~Mul();
+
     std::string value() const { return val_; }
 
     private:
